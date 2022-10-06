@@ -1,6 +1,6 @@
 //sjf non-preemptive
 #include<stdio.h>
-int sjf_tat=0,sjf_wt=0,i,j,t,bt[30],p[30],tot_tat=0,tot_wt=0,n;
+int sjf_tat=0,sjf_wt=0,i,j,t,bt[30],p[30],wt[30],tat[30],tot_tat=0,tot_wt=0,n;
 
 void main(){
 
@@ -33,14 +33,16 @@ int sort(){
             }
         }
     }
+       return 0;
+}
 
-    swap(int *a, int *b){
+   int swap(int *a, int *b){
         t=*a;
         *a=*b;
         *b=t;
+        return 0;
     }
-    return 0;
-}
+ 
 
 int sjf(int *a, int *b){
     for(i=0;i<n;i++){
