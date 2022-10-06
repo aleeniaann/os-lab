@@ -17,9 +17,9 @@ void main(){
     sjf(&sjf_tat,&sjf_wt);
     //print the stuff..
     printf("\ntotal tat= %d",sjf_tat);
-    printf("\navg tat= %d",sjf_tat/n);
+    printf("\navg tat= %f",sjf_tat/n);
 printf("\ntotal wt= %d",sjf_wt);
-printf("\navg wt= %d",sjf_wt/n);
+printf("\navg wt= %f",sjf_wt/n);
 
 
 }
