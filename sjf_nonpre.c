@@ -52,4 +52,9 @@ int sjf(int *a, int *b){
         tot_wt=tot_wt+wt[i];
     }
     *b=tot_wt;
+
+    printf("\nPROCESS\tBT\tTAT\tWT");
+        for(i=0;i<n;i++)
+        printf("\np[%d]\t%d\t%d\t%d",i+1,bt[i],tat[i],wt[i]);
+        return 0;
 }
