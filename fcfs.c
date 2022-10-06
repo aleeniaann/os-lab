@@ -3,23 +3,21 @@ int i,n,bt[30],tat[30],tot_tat=0,wt[30],tot_wt=0;
 fcfs_tat=0,fcfs_wt=0;
 //float 
 void main(){
-    printf("enter no of process: ");
+    printf("\nenter no of process: ");
     scanf("%d",&n);
-    printf("enter burst time of each process: ");
+    printf("\nenter burst time of each process: ");
     for(i=0;i<n;i++){
     scanf("%d",&bt[i]);
 
     }
 
-    printf("fcfs algorithm");
+    printf("\nfcfs algorithm");
     fcfs(&fcfs_tat,&fcfs_wt);
     printf("\ntotal tat= %d",fcfs_tat);
     printf("\navg tat= %d",fcfs_tat/n);
 printf("\ntotal wt= %d",fcfs_wt);
 printf("\navg wt= %d",fcfs_wt/n);
 
-
-    //the printing stuff..
 
 }
 int fcfs(int *a,int *b){
@@ -39,9 +37,9 @@ int fcfs(int *a,int *b){
         }
         *b=tot_wt;
 
-        printf("PROCESS\tBT\tTAT\tWT");
+        printf("\nPROCESS\tBT\tTAT\tWT");
         for(i=0;i<n;i++)
-        printf("p[%d]\t%d\t%d\t%d",i+1,bt[i],tat[i],wt[i]);
+        printf("\np[%d]\t%d\t%d\t%d",i+1,bt[i],tat[i],wt[i]);
         return 0;
 }
 
