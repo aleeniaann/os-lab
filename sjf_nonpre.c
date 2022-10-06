@@ -43,6 +43,13 @@ int sjf(int *a, int *b){
         tat[i]=bt[i];
         else
         tat[i]=tat[i-1]+bt[i];
-        
+        tot_tat=tot_tat+tat[i];
     }
+    *a=tot_tat;
+    wt[0]=0;
+    for(i=0;i<n;i++){
+        wt[i]=wt[i-1]+bt[i-1];
+        tot_wt=tot_wt+wt[i];
+    }
+    *b=tot_wt;
 }
