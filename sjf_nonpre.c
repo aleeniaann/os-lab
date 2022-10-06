@@ -38,5 +38,11 @@ int sort(){
 }
 
 int sjf(int *a, int *b){
-    
+    for(i=0;i<n;i++){
+        if(i==0)
+        tat[i]=bt[i];
+        else
+        tat[i]=tat[i-1]+bt[i];
+        
+    }
 }
