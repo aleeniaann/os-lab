@@ -98,7 +98,24 @@ void cal(){
                 }
             }
         }
-        
+
+        for(i=0;i<n;i++){
+            if(finish[i]==1){
+                c1++;
+            }
+            else{
+                printf("P%d->",i+1);
+            }
+
+        }
+
+        if(c1==n){
+            printf("process is in safe state!");
+        }
+        else{
+            printf("process in deadlock, unsafe state!");
+        }
+
     }
 
 }
