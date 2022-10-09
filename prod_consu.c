@@ -1,7 +1,7 @@
 //program to show producer consumer concept.
 #include<stdio.h>
 #include<stdlib.h>
-int buffersize=0,currentsize=0,c;
+int buffersize=0,currentsize=0,c,n=0,x;
 
 void producer(){
     printf("\nEnter the no of elements to be produced: ");
@@ -11,13 +11,21 @@ void producer(){
         printf("%d elements are produced where buffersize is %d",currentsize,buffersize);
     }
     else{
-        printf("\nBuffer is'nt sufficient!")
+        printf("\nBuffer is'nt sufficient!");
     }
 
 }
 
 void consumer(){
-
+    printf("\nEnter elements to be consumed: ");
+    scanf("%d",&x);
+    if(currentsize>=x){
+    currentsize-=x;
+    printf("\nNo of elements consumed: %d and \nNo of elements left: %d",x,currentsize);
+    }
+    else{
+        printf("\nNo of elements consumed should not be greater than no of elements produced.");
+    }
 }
 
 
