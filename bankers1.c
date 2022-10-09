@@ -65,6 +65,8 @@ void show(){
         }
         }
     }
-    
-    
+}
+
+void cal(){
+    //to calculate bankers algo
 }
