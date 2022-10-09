@@ -4,7 +4,16 @@
 int buffersize=0,currentsize=0,c;
 
 void producer(){
-    
+    printf("\nEnter the no of elements to be produced: ");
+    scanf("%d",&n);
+    if(0<=(buffersize-(currentsize+n))){
+        currentsize+=n;
+        printf("%d elements are produced where buffersize is %d",currentsize,buffersize);
+    }
+    else{
+        printf("\nBuffer is'nt sufficient!")
+    }
+
 }
 
 void consumer(){
