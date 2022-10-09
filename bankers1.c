@@ -100,7 +100,7 @@ void cal(){
                             finish[i]=1;
                             flag=1;
                         }
-                        printf("\n");
+                        //printf("\n");
                         printf("P%d->",i+1);
                         if(finish[i]==1){
                             i=n;
@@ -110,7 +110,7 @@ void cal(){
             }
             
         }
-        
+    }
         for(i=0;i<n;i++){
             if(finish[i]==1){
                 c1++;
@@ -128,4 +128,3 @@ void cal(){
             printf("\nunsafe state, deadlock!");
         }
     }
-}
