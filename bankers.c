@@ -51,5 +51,13 @@ void show(){
             printf("%d",max[i][j]);
         }
         printf("\t");
+
+        //to print available
+        if(i==0){
+            for(j=0;j<r;j++){
+            printf("%d",avail[j]);
+        }
+        printf("\t");
+        }
     }
 }
