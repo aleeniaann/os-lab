@@ -75,6 +75,7 @@ void cal(){
           //                        if finish==1, i=n; 
 
     // }
+    int finish[100],flag=1,k,c1,need[100][100];
 
     for(i=0;i<n;i++){
         finish[i]=0;
