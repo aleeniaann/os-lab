@@ -65,7 +65,7 @@ void show(){
 
 void cal(){
     //main part
-    int finish[100],flag=1,c1;
+    int finish[100],flag=1,c1,k;
     for(i=0;i<n;i++){
         finish[i]=0;
     }
