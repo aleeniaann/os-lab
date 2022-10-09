@@ -10,7 +10,7 @@ void cal();
 int main(){
     input();
     show();
-    cal();
+    //cal();
     return 0;
 }
 
@@ -39,4 +39,40 @@ void input(){
         for(j=0;j<r;j++){
             scanf("%d",&avail[j]);
         }
+
+        //inp complete.
+}
+
+void show(){
+    //print all stuff.
+    printf("\nProcess\tAllocation\tMax\tAvailable");
+    for ( i = 0; i < n; i++)
+    {
+        printf("P%d",i+1);
+        printf("\t");
+        for ( j = 0; j < r; j++)
+        {
+            printf("%d",alloc[i][j]);
+
+        }
+        printf("\t\t");
+        for ( j = 0; j < r; j++)
+        {
+            printf("%d",max[i][j]);
+
+        }
+        printf("\t\t");
+        
+        if(i==0){
+            for ( j = 0; j < r; j++)
+        {
+            printf("%d",avail[j]);
+
+        }
+        
+        }
+        
+    }
+    
+    
 }
