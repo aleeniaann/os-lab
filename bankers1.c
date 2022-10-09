@@ -99,11 +99,31 @@ void cal(){
                             finish[i]=1;
                             flag=1;
                         }
-                        
+                        printf("P%d->",i+1);
+                        if(finish[i]==1){
+                            i=n;
+                        }
                     }
                 }
             }
             
+        }
+        
+        for(i=0;i<n;i++){
+            if(finish[i]==1){
+                c1++;
+            }
+            else {
+                printf("P%d->",i+1);
+            }
+        }
+
+        if(c1==n){
+            printf("safe state.");
+            
+        }
+        else{
+            printf("unsafe state, deadlock!");
         }
     }
 }
