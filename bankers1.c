@@ -48,7 +48,7 @@ void show(){
     printf("\nProcess\tAllocation\tMax\tAvailable");
     for ( i = 0; i < n; i++)
     {
-        printf("P%d",i+1);
+        printf("\nP%d",i+1);
         printf("\t");
         for ( j = 0; j < r; j++)
         {
