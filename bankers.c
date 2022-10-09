@@ -39,5 +39,17 @@ void input(){
 }
 
 void show(){
-    
+    printf("\nProcess\tAllocation\tMax\tAvailable");
+    for(i=0;i<n;i++){
+        printf("%d",i+1);
+        printf("\t");
+        for(j=0;j<r;j++){
+            printf("%d",alloc[i][j]);
+        }
+        printf("\t");
+        for(j=0;j<r;j++){
+            printf("%d",max[i][j]);
+        }
+        printf("\t");
+    }
 }
