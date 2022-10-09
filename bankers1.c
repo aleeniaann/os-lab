@@ -10,7 +10,7 @@ void cal();
 int main(){
     input();
     show();
-    //cal();
+    cal();
     return 0;
 }
 
@@ -50,28 +50,20 @@ void show(){
     {
         printf("\nP%d",i+1);
         printf("\t");
-        for ( j = 0; j < r; j++)
-        {
+        for ( j = 0; j < r; j++){
             printf("%d",alloc[i][j]);
-
         }
         printf("\t\t");
-        for ( j = 0; j < r; j++)
-        {
+        for ( j = 0; j < r; j++){
             printf("%d",max[i][j]);
-
         }
         printf("\t\t");
         
         if(i==0){
-            for ( j = 0; j < r; j++)
-        {
+            for ( j = 0; j < r; j++){
             printf("%d",avail[j]);
-
         }
-        
         }
-        
     }
     
     
