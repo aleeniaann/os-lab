@@ -86,7 +86,7 @@ void cal(){
             need[i][j]=max[i][j]-alloc[i][j];
         }
     }
-
+printf("\n");
     while(flag){
         flag=0;
         for(i=0;i<n;i++){
