@@ -18,11 +18,30 @@ void main(){
     for(i=0;i<bno;i++){
         scanf("%d",&bsize[i]);
     }
-    printf("\nEnter no of processed: ");
+    printf("\nEnter no of processes: ");
     scanf("%d",&pno);
     printf("\nEnter size of each process:");
     for(i=0;i<pno;i++){ //<bno?
         scanf("%d",&psize[i]);
     }
     
+    for(i=0;i<pno;i++)
+    for(j=0;i<bno;j++){
+        if(flag[j]==0){
+            if(bsize[j]>=psize[i]){
+                allocation[i]=j;
+                bsize[j]-=psize[i];
+                break;
+            }
+        }
+    }
+
+    printf("\nProcess no\tProcess size\tBlock no\t");
+    for(i=0;i<pno;i++){
+        printf("\nP%d\t\t%d\t\t",i+1,psize[i]);
+        if(allocation[i]!=-1)
+        printf("%d\n",allocation[i]+1);
+        else
+        printf("Not allocated\n");
+    }
 }
