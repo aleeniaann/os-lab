@@ -60,4 +60,45 @@ void show(){
         printf("\t");
         }
     }
+
+}
+
+void cal(){
+    //main part
+    int finish[100],flag=1,c1;
+    for(i=0;i<n;i++){
+        finish[i]=0;
+    }
+
+    for(i=0;i<n;i++){
+        for(j=0;j<r;j++){
+            need[i][j]=max[i][j]-alloc[i][j];
+            printf("\n");
+        }
+    }
+
+    while(flag){
+        flag=0;
+        for(i=0;i<n;i++){
+            int c=0;
+            for(j=0;j<r;j++){
+                if(finish[i]==0&&need[i][j]<=avail[j]){
+                    c++;
+                    if(c==r){
+                        for(k=0;k<r;k++){
+                            avail[k]+=alloc[i][j];
+                            finish[i]=1;
+                            flag=1;
+                        }
+                        printf("\nP%d->",i+1);
+                        if(finish[i]==1){
+                            i=n;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
 }
