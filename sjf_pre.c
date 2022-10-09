@@ -8,6 +8,8 @@
 //wt= ,tat= }
 
 #include<stdio.h>
+int n,i,at[10],bt[10],temp[10],smallest,count=0,end,time;
+int wt,tat;
 void main(){
     printf("enter no of process:");
     scanf("%d",&n);
@@ -37,6 +39,10 @@ void main(){
         }
     }
     
+    // avgwt=wt/n;
+    // avgtat=tat/n;
+    printf("\nAvg wt=%f",wt/n);
+    printf("\nAvg tat: %f",tat/n);
     
 
 }
