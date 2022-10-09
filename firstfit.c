@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-int i,flag[10],allocation[10],bno,pno,bsize[10],psize[10];
+int i,j,flag[10],allocation[10],bno,pno,bsize[10],psize[10];
 
 void main(){
     for ( i=0;i<10; i++)
