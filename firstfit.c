@@ -25,7 +25,7 @@ void main(){
         scanf("%d",&psize[i]);
     }
     
-    for(i=0;i<pno;i++)
+    for(i=0;i<pno;i++){
     for(j=0;i<bno;j++){
         if(flag[j]==0){
             if(bsize[j]>=psize[i]){
@@ -34,6 +34,7 @@ void main(){
                 break;
             }
         }
+    }
     }
 
     printf("\nProcess no\tProcess size\tBlock no\t");
