@@ -45,7 +45,7 @@ void main(){
             producer();
             break;
     
-    case 2: if(currentsize<=buffersize)//could be mistake
+    case 2: if(currentsize==0)//could be mistake
             printf("Buffer is empty, cannot consume");
             else
             consumer();
