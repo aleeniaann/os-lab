@@ -69,4 +69,41 @@ void show(){
 
 void cal(){
     //to calculate bankers algo
+
+    // //1. finish[i]=0, need=max-alloc, while(flag){
+          //                              flag=0;, if (finish==0&&need<=avail),c++, if(c==r),avail[k]+=alloc; finish=1,flag=1;
+          //                        if finish==1, i=n; 
+
+    // }
+
+    for(i=0;i<n;i++){
+        finish[i]=0;
+    }
+
+        for(i=0;i<n;i++){
+        for (j = 0;j <r;j++){
+            need[i][j]=max[i][j]-alloc[i][j];
+        }
+    }
+
+    while(flag){
+        flag=0;
+        for(i=0;i<n;i++){
+            int c=0;
+            for (j= 0;j<r;j++){
+                if(finish[i]==0&&need[i][j]<=avail[j]){
+                    c++;
+                    if(c==r){
+                        for(k=0;k<r;k++){
+                            avail[k]+=alloc[i][j];
+                            finish[i]=1;
+                            flag=1;
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
 }
